@@ -55,19 +55,38 @@ $(document).ready(function () {
 		$('.js--waypoint2').addClass('animated fadeInUp');
 	}, {
 		offset: '70%'
-	});	
+	});
 	
 	$('.js--waypoint3').waypoint(function (direction) {
 		$('.js--waypoint3').addClass('animated fadeIn');
 	}, {
 		offset: '70%'
-	});	
+	});
 	
 	$('.js--waypoint4').waypoint(function (direction) {
 		$('.js--waypoint4').addClass('animated pulse');
 	}, {
 		offset: '70%'
-	});		
+	});
+	
+	
+	/* Mobile navigation hamburger button */
+	$('.js--nav-icon').click(function() {
+		var nav = $('.js--main-nav');
+		var icon = $('.js--nav-icon i');
+		
+		nav.slideToggle(200);
+		if (icon.hasClass('ion-navicon-round')) {
+			icon.addClass('ion-close-round');
+			icon.removeClass('ion-navicon-round');
+		} else {
+			icon.addClass('ion-navicon-round');
+			icon.removeClass('ion-close-round');
+		}
+		
+	})
+	
+/* END OF DOCUMENT */	
 });
 
 

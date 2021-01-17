@@ -1,30 +1,36 @@
-
 /* Big tablet to 1200px (widths smaller than the 1140px row we used in our earlier .CSS styles definition) */
 /* 1024 pixels to 1200 pixels */
 @media only screen and (max-width:1200px) {
+	
+	/****** just resizing the hero text ******/
 	.hero-text-box {
 		width: 100%;
 		padding: 0 2%;
 	}
 	
+	/****** resizing row padding ******/
 	.row { padding: 0 2%; }
 }
 
 
-/* Small tablets up to a big tablet (also iPad in landscape mode) */
+/* Small tablets up to a big tablet */
+/* (also iPad in landscape mode) */
 /* 768 pixels to 1023 pixels */
 @media only screen and (max-width:1023px) {
-	body { font-size: 18px; }     						/* ###### the text size ###### */
+	
+	/****** global text size ******/
+	body { font-size: 18px; }     						
 	section { padding: 60px 0; } 
 	
 	.long-copy {
 		width: 80%;
 		margin-left: 10%;
 	}
-	
-				
-	.steps-box:first-child { margin-top: 10px; }		/* ###### starting to remove some of the white space ###### */
+			
+	/****** resizing how-it-works ******/
+	.steps-box:first-child { margin-top: 10px; }		
 	.steps-box:last-child { margin-top: 10px; }
+	
 	.works-step { margin-bottom: 40px; }
 	.works-step:last-child { margin-bottom: 60px; }
 	
@@ -35,13 +41,17 @@
 		margin-right: 5px;		
 	}
 	
+	/****** resizing cities section ******/
 	.city-feature { font-size: 90%; }
 	
+	/****** resizing plans section ******/
 	.plan-box {
 		width: 100%;
-		margin-left: 0%;
+		margin-left: 0;
 	}
 	.plan-price { font-size: 250%; }
+	
+	/****** resizing contact form ******/
 	.contact-form { width: 80%; }
 }
 
@@ -50,43 +60,70 @@
 /* 481 pixels to 767 pixels */
 @media only screen and (max-width:767px) {
 	body { font-size: 16px; }
-	section { padding: 30px 0;}
+	section { padding: 30px 0; }
 	
 	.row,
 	.hero-text-box { padding: 0 4%; }
-	.col { width: 100%; }
+	.col { 
+		width: 100%;
+		margin: 0 0 4% 0;
+	}
 	
 	
-	/* .main-nav { display: none; } */
-	.mobile-nav-icon {display: inline-block;}
+	/****** mobile nav ******/
+	.main-nav { display: none; }
+	.mobile-nav-icon {
+		display: inline-block;
+		margin-top: 20px;
+	}
 	
 	.main-nav { 
 		float: left;
-		margin-top: 25px;
+		margin-top: 35px;
 		margin-left: 25px;
 	}
 	
 	.main-nav li {
 		display: block;
+		margin-left: 0;
 	}
 	
 	.main-nav li a:link,	
-	.main-nav li a:visited, {
+	.main-nav li a:visited {
 		display: block;
-		border: 0;	
-		padding: 5px 0;
+		border: 0;
+		padding: 10px 0;
+		font-size: 100%;
 	}	
 	
+	.main-nav li a:hover,
+	.main-nav li a:active {
+    	border: 0; 
+	}
 	
+	/****** mobile nav sticky ******/
+	.sticky .mobile-nav-icon { margin-top: 10px;}
+	.sticky .mobile-nav-icon i{color: #555; }
+
+	.sticky .main-nav { margin-top: 10px; }
+
+	.sticky .main-nav li a:link,
+	.sticky .main-nav li a:visited {
+    	padding: 10px 0;
+    	color: #555;
+		border: 0;
+	}
+	
+	/****** mobile resize headers ******/
 	h1 { font-size: 180%; }
 	h2 { font-size: 150%; }
 	
 	.long-copy {
 		width: 100%;
-		margin-left: 0%;
+		margin-left: 0;
 	}
 	
-
+	/****** mobile how-it-works ******/
 	.works-step { margin-bottom: 20px; }
 	.works-step:last-child { margin-bottom: 20px; }
 	
@@ -99,12 +136,14 @@
 	}
 	
 	.steps-box:first-child { text-align: center; }
-	.app-screen: { width 40%; }
+	.app-screen: { width: 40%; }
 	
+	
+	/****** mobile resizing columns at the grid.css level ******/
 	.col {
 	width: 100%;
-	margin: 0% 0 4% 0%;
-}
+	margin: 0 0 4% 0;
+	}
 	
 }
 
