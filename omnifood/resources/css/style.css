@@ -257,7 +257,7 @@ header {
 .main-nav {
     float: right;
     list-style: none;
-    margin-top: 80px;
+    margin-top: 55px;
 }
 
 .main-nav li {
@@ -282,6 +282,20 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 
+/* mobile navigation */
+
+.mobile-nav-icon {
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+.mobile-nav-icon i{
+	font-size: 200%;
+	color: #fff;
+}
+
 /* sticky navigation */
 
 .sticky {
@@ -290,13 +304,12 @@ header {
 	left: 0;
 	width: 100%;
 	background-color: rgba(255, 255, 255, 0.98);
+	-webkit-box-shadow: 0 2px 2px #efefef;
 	box-shadow: 0 2px 2px #efefef;
 	z-index: 9999;
 }
 
 .sticky .main-nav {
-    float: right;
-    list-style: none;
     margin-top: 18px;
 }
 
@@ -676,13 +689,24 @@ footer p {
 
 
 /* -------------------------------------- */
-/* FOOTER */
+/* Animations */
 /* -------------------------------------- */
 
-.js--waypoint1 {
+.js--waypoint1,
+.js--waypoint2,
+.js--waypoint3 {
 	opacity: 0;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+.js--waypoint4 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
 }
 	
-.js--waypoint1.animated {
+.js--waypoint1.animated,
+.js--waypoint2.animated,
+.js--waypoint3.animated,{
 	opacity: 1;
 }

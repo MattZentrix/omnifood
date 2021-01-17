@@ -45,10 +45,29 @@ $(document).ready(function () {
 
 
 	/* Animations on scroll */
-	$('js--waypoint1').waypoint(function (direction) {
+	$('.js--waypoint1').waypoint(function (direction) {
 		$('.js--waypoint1').addClass('animated fadeIn');
-	})
+	}, {
+		offset: '70%'
+	});
 
+	$('.js--waypoint2').waypoint(function (direction) {
+		$('.js--waypoint2').addClass('animated fadeInUp');
+	}, {
+		offset: '70%'
+	});	
+	
+	$('.js--waypoint3').waypoint(function (direction) {
+		$('.js--waypoint3').addClass('animated fadeIn');
+	}, {
+		offset: '70%'
+	});	
+	
+	$('.js--waypoint4').waypoint(function (direction) {
+		$('.js--waypoint4').addClass('animated pulse');
+	}, {
+		offset: '70%'
+	});		
 });
 
 
